@@ -4,6 +4,4 @@ App de conclusão do curso de construção de aplicativos móveis com Maui e .Ne
 ## Screenshots
 
 ![Tela inicial]
-(https://github.com/everton-zanini/Maui7AppControleFinanceiro/blob/main/Screenshots/Screenshot_1.png)
-
-
+(https://github.com/everton-zanini/Maui7AppControleFinanceiro/blob/main/Screenshots/Screenshot_1.png "Tela inicial")
