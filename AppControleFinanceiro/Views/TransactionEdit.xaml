@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppControleFinanceiro.Views.TransactionEdit"
+             Title="TransactionEdit">
+    <VerticalStackLayout Spacing="10">
+        <Border 
+            BackgroundColor="#000" 
+            Stroke="Transparent"
+            Padding="15"
+            StrokeShape="RoundRectangle 30"
+            Margin="15">
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*,30">
+                <Label 
+                    Text="Atualizar"
+                    TextColor="#fff"
+                    HorizontalOptions="Center" 
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+                <Image
+                    Source="close.png"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    WidthRequest="17">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizerTapped_To_Close"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </Border>
+        <Label TextColor="red" x:Name="LabelError" IsVisible="False" Margin="20"/>
+        <Grid ColumnDefinitions="*,*" Margin="30,0">
+            <RadioButton
+            x:Name="RadioIncome"
+            IsChecked="True"
+            Content="Receita"
+            Grid.Row="0"
+            Grid.Column="0"
+            />
+            <RadioButton
+            x:Name="RadioExpense"
+            Content="Despesa"
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="End"/>
+        </Grid>
+        <DatePicker
+            x:Name="DatePickerDate"
+            Margin="15,0"
+            HorizontalOptions="End"/>
+        <Entry
+            x:Name="EntryName"
+            Placeholder="Nome"
+            Margin="15,0"
+            />
+        <Entry
+            x:Name="EntryValue"
+            Placeholder="Valor"
+            Margin="15,0"
+            />
+        <Button
+            Text="Editar"
+            Margin="15,0"
+            HorizontalOptions="Center"
+            Clicked="OnButtonClicked_Edit"/>
+    </VerticalStackLayout>
+</ContentPage>
